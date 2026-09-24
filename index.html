@@ -341,6 +341,7 @@ div.gcim-topper__after {
 }
 @media screen and (max-width: 781px) {
   .gcim-header__previous-site-link {
+    display: none;
     font-size: 8px;
     letter-spacing: .08em;
     margin-left: 4px;
@@ -485,6 +486,10 @@ div.gcim-topper__after {
 }
 .gcim-header__drawer-menu .menu-item a:hover,
 .gcim-header__drawer-menu .menu-item a:focus-visible { opacity: .75; }
+.gcim-header__drawer-previous-site-mobile { display: none; }
+@media screen and (max-width: 781px) {
+  .gcim-header__drawer-previous-site-mobile { display: block; }
+}
 </style>
 </head>
 
@@ -518,7 +523,19 @@ div.gcim-topper__after {
 				</a>
 			</div>
 			<div class="gcim-header__right">
-				<nav class="gcim-header-language-switcher" aria-label="Language selector">
+								<details class="gcim-mobile-language-switcher">
+					<summary aria-label="Language selector"><span>EN</span></summary>
+					<nav class="gcim-mobile-language-switcher__menu" aria-label="Language selector">
+						<a class="is-active" aria-current="page" href="index.html" lang="en">EN</a>
+						<a href="index-ru.html" lang="ru">RU</a>
+						<a href="index-fr.html" lang="fr">FR</a>
+						<a href="index-es.html" lang="es">ES</a>
+						<a href="index-ar.html" lang="ar">AR</a>
+						<a href="index-zh.html" lang="zh-CN">ZH</a>
+						<a href="index-uk.html" lang="uk">UK</a>
+					</nav>
+				</details>
+<nav class="gcim-header-language-switcher" aria-label="Language selector">
 					<a class="is-active" href="index.html" lang="en" aria-current="page">EN</a>
 					<a href="index-ar.html" lang="ar">AR</a>
 					<a href="index-es.html" lang="es">ES</a>
@@ -596,7 +613,7 @@ div.gcim-topper__after {
 			<span class="screen-reader-text">Close</span>
 		</button>
 		<div class="gcim-header__menu-content">
-			<nav class="gcim-header__drawer-navigation" aria-label="Menu"><ul class="menu gcim-header__drawer-menu"><li class="menu-item"><a href="index.html#">HOME</a></li><li class="menu-item"><a href="index.html#">NEWS</a></li><li class="menu-item"><a href="index.html#">ABOUT US</a></li><li class="menu-item"><a href="index.html#">COORDINATOR</a></li><li class="menu-item"><a href="index.html#">INITIATIVES</a></li><li class="menu-item"><a href="index.html#">CONTACTS</a></li></ul></nav>
+			<nav class="gcim-header__drawer-navigation" aria-label="Menu"><ul class="menu gcim-header__drawer-menu"><li class="menu-item"><a href="index.html#">HOME</a></li><li class="menu-item"><a href="index.html#">NEWS</a></li><li class="menu-item"><a href="index.html#">ABOUT US</a></li><li class="menu-item"><a href="index.html#">COORDINATOR</a></li><li class="menu-item"><a href="index.html#">INITIATIVES</a></li><li class="menu-item"><a href="index.html#">CONTACTS</a></li><li class="menu-item gcim-header__drawer-previous-site-mobile"><a href="index.html#">PREVIOUS VERSION OF THE SITE</a></li></ul></nav>
 		</div>
 	</div>
 
