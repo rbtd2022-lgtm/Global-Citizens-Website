@@ -1093,3 +1093,19 @@ html:lang(uk) .gc-hero-title>span:first-child{font-size:.85em;}
   -webkit-text-size-adjust:100%;text-size-adjust:100%;
  }
 }
+
+/* v18: keep the RTL news control compact and respect reduced motion. */
+#f250-widget .gcim-newsroom-fab{
+ left:auto;
+ inset-inline-start:auto;
+ width:max-content;
+ max-width:calc(100vw - 32px);
+ box-sizing:border-box;
+}
+@media(max-width:781px){
+ #f250-widget .gcim-newsroom-fab{max-width:calc(100vw - 24px);}
+}
+@media(prefers-reduced-motion:reduce){
+ #f250-widget .gcim-newsroom-fab-pulse{animation:none!important;}
+ #f250-widget .gcim-newsroom-fab{transition:none!important;}
+}
