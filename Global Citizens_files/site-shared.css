@@ -1109,3 +1109,13 @@ html:lang(uk) .gc-hero-title>span:first-child{font-size:.85em;}
  #f250-widget .gcim-newsroom-fab-pulse{animation:none!important;}
  #f250-widget .gcim-newsroom-fab{transition:none!important;}
 }
+
+/* v19: keep desktop hero lettering in the same clipped layer as its video. */
+@media(min-width:782px){
+ .gcim-topper.is-style-full-media{isolation:isolate;overflow:hidden;}
+}
+
+/* v20: contain mobile hero lettering below the header language menu. */
+@media(max-width:781px){
+ .gcim-topper.is-style-full-media{isolation:isolate;}
+}
